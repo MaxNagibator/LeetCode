@@ -8,6 +8,7 @@ namespace LeetCode
     /// </summary>
     internal class Solution1593
     {
+        // трешанина от бобины
         public int MaxUniqueSplit(string s)
         {
             var maxNumber = 1;
@@ -49,6 +50,29 @@ namespace LeetCode
                 }
             }
             return maxNumber;
+        }
+
+        // решение от рокича
+        public int MaxUniqueSplitRocka_0(string s)
+        {
+            return Backtrack(s, 0, new HashSet<string>());
+        }
+
+        private int Backtrack(string s, int start, HashSet<string> used)
+        {
+            if (start == s.Length) { return 0; }
+            int maxSplits = 0;
+            for (int end = start + 1; end <= s.Length; end++)
+            {
+                string substring = s.Substring(start, end - start);
+                if (!used.Contains(substring))
+                {
+                    used.Add(substring);
+                    maxSplits = Math.Max(maxSplits, 1 + Backtrack(s, end, used));
+                    used.Remove(substring);
+                }
+            }
+            return maxSplits;
         }
     }
 }
