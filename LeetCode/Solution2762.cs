@@ -36,11 +36,11 @@ namespace LeetCode
             return ans;
         }
 
-       /// <summary>
-       /// Шляпа от стримера.
-       /// </summary>
-       /// <param name="nums"></param>
-       /// <returns></returns>
+        /// <summary>
+        /// Шляпа от стримера.
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
         public long ContinuousSubarraysBobina(int[] nums)
         {
             var sw = new Stopwatch();
@@ -110,4 +110,5 @@ namespace LeetCode
             return sum;
 
         }
+    }
 }
