@@ -12,17 +12,29 @@ using System.Text.Json;
 //Console.WriteLine(sln.ContinuousSubarrays([5,4,2,4]));
 //Console.WriteLine(sln.ContinuousSubarrays(values));
 
-var sln = new Solution1792();
-//Console.WriteLine(sln.MaxAverageRatio([[1, 3], [1, 3]], 2));
-//Console.WriteLine(sln.MaxAverageRatio([[1, 2], [3, 5], [2, 2]], 2));
-Console.WriteLine(sln.MaxAverageRatio([[2, 4], [3, 9], [4, 5], [2, 10]], 4));
+//var sln = new Solution1792();
+////Console.WriteLine(sln.MaxAverageRatio([[1, 3], [1, 3]], 2));
+////Console.WriteLine(sln.MaxAverageRatio([[1, 2], [3, 5], [2, 2]], 2));
+//Console.WriteLine(sln.MaxAverageRatio([[2, 4], [3, 9], [4, 5], [2, 10]], 4));
 
-var asd = File.ReadAllText("Solution1792.txt");
-asd = File.ReadAllText("Solution1792b.txt");
-var array = JsonSerializer.Deserialize<int[][]>(asd);
-//var values = asd.Trim('[').Trim(']').Split(",").Select(x=> Int32.Parse(x)).ToArray();.
+//var asd = File.ReadAllText("Solution1792.txt");
+//asd = File.ReadAllText("Solution1792b.txt");
+//var array = JsonSerializer.Deserialize<int[][]>(asd);
+////var values = asd.Trim('[').Trim(']').Split(",").Select(x=> Int32.Parse(x)).ToArray();.
+//var sw = new Stopwatch();
+//sw.Start();
+//Console.WriteLine(sln.MaxAverageRatio(array, 100000));
+//sw.Stop();
+//Console.WriteLine(sw.ElapsedMilliseconds + "ms");
+
+var sln = new Solution2182();
+//Console.WriteLine(sln.RepeatLimitedString("cczazcc", 3));
+//Console.WriteLine(sln.RepeatLimitedString("aababab", 2));
+var asd = File.ReadAllText("Solution2182.txt");
 var sw = new Stopwatch();
 sw.Start();
-Console.WriteLine(sln.MaxAverageRatio(array, 100000));
+sln.RepeatLimitedString(asd, 1);
+sln.RepeatLimitedString("xyutfpopdynbadwtvmxiemmusevduloxwvpkjioizvanetecnuqbqqdtrwrkgt", 1);
+
 sw.Stop();
 Console.WriteLine(sw.ElapsedMilliseconds + "ms");
