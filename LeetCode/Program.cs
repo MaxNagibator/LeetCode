@@ -39,11 +39,23 @@ using System.Text.Json;
 //sw.Stop();
 //Console.WriteLine(sw.ElapsedMilliseconds + "ms");
 
-var sln = new Solution515();
+//var sln = new Solution515();
+//var sw = new Stopwatch();
+//sw.Start();
+//var data = sln.GetTestData([1, 3, 2, 5, 3, null, 9]);
+//var result = sln.LargestValues(data);
+//Console.WriteLine(string.Join(" ", result));
+
+//sw.Stop();
+//Console.WriteLine(sw.ElapsedMilliseconds + "ms");
+
+var sln = new Solution3264();
 var sw = new Stopwatch();
 sw.Start();
-var data = sln.GetTestData([1, 3, 2, 5, 3, null, 9]);
-var result = sln.LargestValues(data);
+//var result = sln.GetFinalState([2, 1, 3, 5, 6], 5, 2);
+//Console.WriteLine(string.Join(" ", result));
+
+var result = sln.GetFinalState([1, 3, 5], 5, 3);
 Console.WriteLine(string.Join(" ", result));
 
 sw.Stop();
