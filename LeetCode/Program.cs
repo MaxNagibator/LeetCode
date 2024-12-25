@@ -27,14 +27,24 @@ using System.Text.Json;
 //sw.Stop();
 //Console.WriteLine(sw.ElapsedMilliseconds + "ms");
 
-var sln = new Solution2182();
-//Console.WriteLine(sln.RepeatLimitedString("cczazcc", 3));
-//Console.WriteLine(sln.RepeatLimitedString("aababab", 2));
-var asd = File.ReadAllText("Solution2182.txt");
+//var sln = new Solution2182();
+////Console.WriteLine(sln.RepeatLimitedString("cczazcc", 3));
+////Console.WriteLine(sln.RepeatLimitedString("aababab", 2));
+//var asd = File.ReadAllText("Solution2182.txt");
+//var sw = new Stopwatch();
+//sw.Start();
+//sln.RepeatLimitedString(asd, 1);
+//sln.RepeatLimitedString("xyutfpopdynbadwtvmxiemmusevduloxwvpkjioizvanetecnuqbqqdtrwrkgt", 1);
+
+//sw.Stop();
+//Console.WriteLine(sw.ElapsedMilliseconds + "ms");
+
+var sln = new Solution515();
 var sw = new Stopwatch();
 sw.Start();
-sln.RepeatLimitedString(asd, 1);
-sln.RepeatLimitedString("xyutfpopdynbadwtvmxiemmusevduloxwvpkjioizvanetecnuqbqqdtrwrkgt", 1);
+var data = sln.GetTestData([1, 3, 2, 5, 3, null, 9]);
+var result = sln.LargestValues(data);
+Console.WriteLine(string.Join(" ", result));
 
 sw.Stop();
 Console.WriteLine(sw.ElapsedMilliseconds + "ms");
