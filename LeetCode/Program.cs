@@ -49,14 +49,18 @@ using System.Text.Json;
 //sw.Stop();
 //Console.WriteLine(sw.ElapsedMilliseconds + "ms");
 
-var sln = new Solution3264();
-var sw = new Stopwatch();
-sw.Start();
-//var result = sln.GetFinalState([2, 1, 3, 5, 6], 5, 2);
+//var sln = new Solution3264();
+//var sw = new Stopwatch();
+//sw.Start();
+////var result = sln.GetFinalState([2, 1, 3, 5, 6], 5, 2);
+////Console.WriteLine(string.Join(" ", result));
+
+//var result = sln.GetFinalState([1, 3, 5], 5, 3);
 //Console.WriteLine(string.Join(" ", result));
 
-var result = sln.GetFinalState([1, 3, 5], 5, 3);
-Console.WriteLine(string.Join(" ", result));
+//sw.Stop();
+//Console.WriteLine(sw.ElapsedMilliseconds + "ms");
 
-sw.Stop();
-Console.WriteLine(sw.ElapsedMilliseconds + "ms");
+var sln = new Solution1();
+var result = sln.TwoSum([2, 7, 11, 15], 9);
+Console.WriteLine(string.Join(" ", result));
