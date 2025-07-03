@@ -61,6 +61,10 @@ using System.Text.Json;
 //sw.Stop();
 //Console.WriteLine(sw.ElapsedMilliseconds + "ms");
 
-var sln = new Solution1();
-var result = sln.TwoSum([2, 7, 11, 15], 9);
-Console.WriteLine(string.Join(" ", result));
+var sln = new Solution206();
+var head5 = new Solution206.ListNode(5, null);
+var head4 = new Solution206.ListNode(4, head5);
+var head3 = new Solution206.ListNode(3, head4);
+var head2 = new Solution206.ListNode(2, head3);
+var head = new Solution206.ListNode(1, head2);
+sln.ReverseList(head);
